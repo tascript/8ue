@@ -1,4 +1,4 @@
-module github.com/tascript/8ue
+module github.com/tascript/8ue/runtime
 
 go 1.22.0
 
