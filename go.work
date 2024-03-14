@@ -2,7 +2,9 @@ go 1.22.0
 
 use (
 	./runtime
+	./scratch
 	./server
 	./wasi
+	./wasiserver
 	./wasm
 )
