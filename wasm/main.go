@@ -5,7 +5,7 @@ import (
 )
 
 func greet(this js.Value, args []js.Value) any {
-	js.Global().Get("document").Call("getElementById", "greet").Call("innerHTML", "HELLO!!")
+	js.Global().Get("document").Call("getElementById", "greet").Set("innerHTML", "HELLO!!")
 	return nil
 }
 

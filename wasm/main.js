@@ -1,6 +1,5 @@
 const go = new Go()
-const { instance } = await WebAssembly.instantiateStreaming(
-  fetch("main.wasm"),
-  go.importObject
-)
-const greet = () => goGreet() 
+WebAssembly.instantiateStreaming(fetch("main.wasm"), go.importObject).then((result) => {
+  go.run(result.instance)
+})
+const greet = () => goGreet()
