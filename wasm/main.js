@@ -1,11 +1,6 @@
-import './wasm_exec.js'
-
-const path = new URL("main.wasm", import.meta.url)
 const go = new Go()
 const { instance } = await WebAssembly.instantiateStreaming(
-  fetch(path),
-  {
-    ...go.importObject
-  }
+  fetch("main.wasm"),
+  go.importObject
 )
-go.run(instance)
+const greet = () => goGreet() 
